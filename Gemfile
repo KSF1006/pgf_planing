@@ -3,7 +3,7 @@ source "https://rubygems.org"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.1.1"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
-gem "propshaft"
+gem "propshaft", "~> 1.3"
 # Use mysql as the database for Active Record
 gem "mysql2", "~> 0.5"
 # Use the Puma web server [https://github.com/puma/puma]
@@ -67,4 +67,8 @@ group :test do
   gem "selenium-webdriver"
 end
 
+gem "bootstrap", "~> 5.3"
+gem "dartsass-rails"
 gem "devise"
+
+gem "cssbundling-rails", "~> 1.4"
