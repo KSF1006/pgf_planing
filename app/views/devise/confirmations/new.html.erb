@@ -1,0 +1,20 @@
+<div class="max-w-md mx-auto bg-white p-8 rounded-2xl shadow-xl">
+  <h2 class="text-2xl font-bold text-center mb-6">Resend confirmation instructions</h2>
+
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <%= form_with(model: resource, url: confirmation_path(resource_name), class: "space-y-4") do |f| %>
+    <div>
+      <%= f.label :email, class: "form-label" %>
+      <%= f.email_field :email, autofocus: true, class: "form-input" %>
+    </div>
+
+    <div>
+      <%= f.submit "Send confirmation instructions", class: "btn-primary" %>
+    </div>
+  <% end %>
+
+  <div class="mt-6 text-center text-sm">
+    <%= render "devise/shared/links" %>
+  </div>
+</div>

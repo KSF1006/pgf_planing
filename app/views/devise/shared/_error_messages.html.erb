@@ -1,0 +1,12 @@
+<% if resource.errors.any? %>
+  <div class="mb-4 rounded-lg bg-red-100 p-4 text-red-700">
+    <h2 class="font-semibold mb-2">
+      <%= pluralize(resource.errors.count, "error") %> prohibited this form from being saved:
+    </h2>
+    <ul class="list-disc list-inside text-sm">
+      <% resource.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
