@@ -1,2 +1,9 @@
 run_test:
   rails test
+stages:
+  - build
+
+build-job:
+  stage: build
+  script:
+    - echo "Hello, CI/CD!"
